@@ -38,7 +38,7 @@ func calcSquare(squareLen float64) float64 {
 }
 
 func calcTriangle(triangleLen float64) float64 {
-	triangle := math.Sqrt(3) / 4 * triangleLen
+	triangle := (math.Sqrt(3) / 4) * math.Pow(triangleLen, 2)
 	return triangle
 }
 
