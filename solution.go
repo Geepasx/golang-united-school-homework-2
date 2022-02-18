@@ -12,10 +12,12 @@ import "math"
 
 type customside int
 
+const SidesTriangle customside = 3
+const SidesSquare customside = 4
+const SidesCircle customside = 0
+
 func CalcSquare(sideLen float64, sidesnum customside) float64 {
-	const SidesTriangle customside = 3
-	const SidesSquare customside = 4
-	const SidesCircle customside = 0
+
 	var result float64 = 0
 
 	if sidesnum == SidesSquare {
@@ -36,7 +38,7 @@ func calcSquare(squareLen float64) float64 {
 }
 
 func calcTriangle(triangleLen float64) float64 {
-	triangle := (triangleLen * 2 * math.Sqrt(3)) / 4
+	triangle := math.Sqrt(3) / 4 * triangleLen
 	return triangle
 }
 
